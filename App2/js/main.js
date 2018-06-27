@@ -1,16 +1,17 @@
-﻿var list = new Array();
-var string = "hello world";
-var splitstring=string.split(" ");
-console.log(splitstring[0]);
-
-
-function blah(derp) {
-    for (var i = 0; i <= derp.length ;i++) {
-      list.push(i);
-      console.log(list[i]);
+﻿function longestWord(word) {
+    //splitword will split the argument into an array of every word
+    var splitword = word.split(" ");
+    //this will hold the longest word from the array
+    var temp = " ";
+    //this will run everytime for each string
+    for (var i = 0; i < splitword.length; i++) {
+        //this will assign the longest string to the temp variable
+        if (splitword[i].length >= temp.length) {
+            temp = splitword[i]
+        };
     };
-  
-    
+    //this will log the longest word
+    console.log(temp);  
 };
-// blah("hello world");
+longestWord("hello worlds");
 
